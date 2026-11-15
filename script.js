@@ -29,6 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
   let categories = [];
   let isOpen = false;
 
+  fetch('https://dummyjson.com/recipes?limit=50')
+  .then(res => res.json())
+  .then(console.log);
+
+  fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+  .then(res => res.json())
+  .then(console.log);
+
+  fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=vegetarian')
+  .then(res => res.json())
+  .then(console.log);
+
   // Toggle mobile navigation menu
   menuToggle.addEventListener('click', () => {
     isOpen = !isOpen;
