@@ -19,6 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalIngredients = document.getElementById('modal-ingredients');
   const modalInstructions = document.getElementById('modal-instructions');
 
+  fetch('https://dummyjson.com/recipes?limit=50')
+  .then(res => res.json())
+  .then(console.log);
+
+  fetch('https://www.themealdb.com/api/json/v1/1/categories.php')
+  .then(res => res.json())
+  .then(console.log);
+
+  fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=vegetarian')
+  .then(res => res.json())
+  .then(console.log);
+  
   // About Modal elements
   const aboutLink = document.getElementById('about-link');
   const aboutOverlay = document.getElementById('about-overlay');
